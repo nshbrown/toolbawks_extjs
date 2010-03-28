@@ -1,0 +1,22 @@
+= Toolbawks Extjs - Installation Directions
+
+1. Create your Rails application, set up your databases.
+
+2. Install the Toolbawks Extjs (it will install Engines if it doesn't already exist)
+	
+	script/plugin install http://svn.toolbocks.com/plugins/toolbawks_extjs/
+
+3. Add the following within the "Rails::Initializer.run do |config|" block in config/environment.rb
+
+    config.plugins = ["engines", "*"]
+
+4. The EXT Toolbawks provides a core stylesheets and in addition to several javascript files, so you'll 
+   need to include these two lines within your application's layout. Add the following lines:
+
+  <%= stylesheet_link_tag 'ext-all', :plugin => 'toolbawks_extjs' %>
+  <%= javascript_include_tag 'prototype', 'effects' %>
+  <%= javascript_include_tag 'adapter/prototype/ext-prototype-adapter', 'ext-all', :plugin => 'toolbawks_extjs' %>
+
+5. For good measure, you should update your JavaScripts to the latest version of Prototype and Scriptaculous.
+
+  rake rails:update:javascripts

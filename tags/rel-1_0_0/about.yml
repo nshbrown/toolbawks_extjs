@@ -1,0 +1,7 @@
+author: Nathaniel Brown
+email: nshb@inimit.com
+homepage: http://www.toolbawks.com
+summary: EXT Toolbawks is a Rails Plugin for the EXTJS library.
+description: EXT Toolbawks is the Ruby on Rails plugin to extend the EXTJS Library providing Rails helpers for all the tasks.
+license: LGPL
+version: 1.0.0
